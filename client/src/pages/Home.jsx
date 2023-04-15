@@ -23,12 +23,15 @@ const Home = () => {
       setLoading(true);
 
       try {
-        const response = await fetch("http://localhost:8080/api/v1/post", {
-          method: "GET",
-          headers: {
-            "content-type": "application/json",
-          },
-        });
+        const response = await fetch(
+          "https://dall-e-z3rp.onrender.com/api/v1/post",
+          {
+            method: "GET",
+            headers: {
+              "content-type": "application/json",
+            },
+          }
+        );
 
         if (response.ok) {
           const result = await response.json();
